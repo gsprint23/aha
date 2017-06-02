@@ -1,10 +1,8 @@
-# [CptS 215](http://piazza.com/wsu/fall2017/cpts215/home) Github Repository
-Data Analytics Systems and Algorithms
+# [AHA! Activity Health Analytics](http://casas.wsu.edu/)
+[Center for Advanced Studies of Adaptive Systems (CASAS)](http://casas.wsu.edu/)
 
-[Washington State University](http://wsu.edu)
+[Washington State University](https://wsu.edu)
 
-Welcome to the Github repository for CptS 215 at WSU. Course materials are hosted here in the following folders:
-* lessons (notes from class)
+Welcome to the Github repository for AHA!. Course materials are hosted here in the following folders:
+* lessons (notes)
 * progassignments (programming assignments for homework)
-* microassignments (concept/programming assignments for homework)
-* project (final project for the course)

@@ -33,9 +33,11 @@ Welcome to the Github repository for AHA!. Course materials are hosted here in t
 * PA. Clinical Data Aggregation
 
 ### Activity Change Detection (ACD)
-* L1. Fitbit Activity Data
-* L2. Activity Density Maps
-* L3. Physical Activity Change Detection
-* L4. Virtual Classifier: Part 1
-* L5. Virtual Classifier: Part 2
+* L1. Fitbit API
+* L2. Fitbit Activity Data
+* L3. Activity Density Maps: Part 1
+* L4. Activity Density Maps: Part 2
+* L5. Physical Activity Change Detection
+* L6. Virtual Classifier: Part 1
+* L7. Virtual Classifier: Part 2
 * PA. Daily Change Scores

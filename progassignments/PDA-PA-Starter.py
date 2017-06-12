@@ -19,7 +19,7 @@ class Cluster:
     def __init__(self, df=None):
         '''
         constructor
-        df is data frame
+        df is a data frame of sample(s)
         '''
         self.df = df
         
@@ -33,6 +33,7 @@ class Cluster:
         
     def add_sample(self, sample): 
         '''
+        sample is a row of data
         add a sample to this cluster's data frame
         '''
         self.df = self.df.append(sample)
@@ -48,6 +49,7 @@ class Cluster:
 
 def display_clusters(clusters):
     '''
+    clusters is a list of Cluster objects
     utility function to display the data frame and prototype of each cluster
     '''
     for i, cluster in enumerate(clusters):
@@ -91,7 +93,7 @@ def randomly_assign_to_clusters(k, df, clusters):
 ######################################
 def main():
     '''
-    Example runs
+    example runs
     files\simple.csv files\simple_results.csv 3 5
     files\cancer.csv files\cancer_results.csv 2 5
     '''
@@ -113,7 +115,7 @@ def main():
     clusters = create_empty_clusters(k, df.columns)
     randomly_assign_to_clusters(k, df, clusters)
     display_clusters(clusters)
-    # TODO: Implement K means clustering 
+    # TODO: implement K means clustering 
     # TODO: write out cluster results
     
 if __name__ == "__main__":

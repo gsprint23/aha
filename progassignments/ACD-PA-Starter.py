@@ -39,7 +39,9 @@ def build_daily_steps_df(data_dir):
  
 def compute_features_df(df, mins_interval):
     '''
-    Use mins_interval parameter to support re-sampling
+    df is the time series steps data frame
+    mins_interval is the number of minutes per interval the data was re-sampled to
+    use mins_interval parameter to support re-sampling
     '''
     features_df = pd.DataFrame(index=df.columns)
     features_df["total"] = df.sum()
@@ -72,9 +74,12 @@ def compute_features_df(df, mins_interval):
 ######################################
 def main():
     '''
-    Example run
+    example runs
     files\fitbit_example2_data files\aha-ds_60_features.csv files\aha-ds_60_b.csv 60 b
-    Resampled to 60 minutes, baseline comparisons
+    resampled to 60 minutes, baseline comparisons
+    
+    files\fitbit_example2_data files\aha-ds_15_features.csv files\aha-ds_15_s.csv 15 s
+    resampled to 15 minutes, sliding comparisons
     '''
     if len(sys.argv) == 6:
         data_dir = sys.argv[1]
@@ -88,8 +93,10 @@ def main():
         sys.exit(-1)
           
     steps_df = build_daily_steps_df(data_dir)
+    # resample the data by summing
     df = steps_df.resample(str(t_mins) + "T").sum()
     features_df = compute_features_df(df, t_mins)
+    # write the resampled data features to a file
     features_df.to_csv(features_file)
     
     # TODO: call appropriate function for baseline or sliding comparisons based on mode
